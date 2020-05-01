@@ -4,12 +4,12 @@ Python script to perform Bland-Altman statistical analysis on two vectors of dat
 ## Steps
 1. Open BlandAltmanPy file in Jupyter Notebooks
 2. Get your two vectors of data into the Notebook
-  - See example with example_data.csv file
-    - One column should have the gold standard measurements
-    - Another column should have the new measurements that you are comparing
-    - Labels should be in first row
+    - See example with example_data.csv file
+      - One column should have the gold standard measurements
+      - Another column should have the new measurements that you are comparing
+      - Labels should be in first row
 3. Run the BlandAltman class definition
-  - class BlandAltman()
+    - class BlandAltman()
 4. Create the BlandAltman class for your data:
 ```python
 compare = BlandAltman(df.gold_standard,df.new_measure)
