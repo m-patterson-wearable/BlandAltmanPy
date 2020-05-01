@@ -1,6 +1,8 @@
 # BlandAltmanPy
 Python script to perform Bland-Altman statistical analysis on two vectors of data. Create a BlandAltman class with your data and call methods to automatically generate Bland-Altman statistics and graphs. Statistics and graphs are based on the gold standard Bland-Altman style statistical comparison preseented in [[1]](https://pubmed.ncbi.nlm.nih.gov/2868172/) and [[2]](https://mail.biochemia-medica.com/assets/images/upload/xml_tif/Giavarina_Davide-Understanding_Bland_Altman_analyses.pdf).
 
+The Bland-Altman method was introduced in a 1986 journal paper by those authors and presented methods for assessing validation of a new measure compared to a gold standard measure. These statistical methodologies have become the gold standard for comparing data from a novel medical device.
+
 ## Steps
 1. Open BlandAltmanPy file in Jupyter Notebooks
 2. Get your two vectors of data into the Notebook
