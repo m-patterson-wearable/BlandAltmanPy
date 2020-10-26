@@ -4,19 +4,20 @@ Python script to perform Bland-Altman statistical analysis on two vectors of dat
 The Bland-Altman method was introduced in a 1986 journal paper by those authors and presented methods for assessing validation of a new measure compared to a gold standard measure. These statistical methodologies have become the gold standard for comparing data from a novel medical device.
 
 ## Steps
-1. Open BlandAltmanPy file in Jupyter Notebooks
-2. Get your two vectors of data into the Notebook
+1. Place the BlandAltman.py file in the folder you are working in
+2. In Python call 'import BlandAltmanPy'
+3. Get your two vectors of data into the Notebook
     - See example with example_data.csv file
       - One column should have the gold standard measurements
       - Another column should have the new measurements that you are comparing
       - Labels should be in first row
-3. Run the BlandAltman class definition
+4. Run the BlandAltman class definition
     - class BlandAltman()
-4. Create the BlandAltman class for your data:
+5. Create the BlandAltman class for your data:
 ```python
-compare = BlandAltman(df.gold_standard,df.new_measure)
+compare = BlandAltmanPy.BlandAltman(df.gold_standard,df.new_measure)
 ```
-5. Now you can call methods off of compare to get statistics and plots
+6. Now you can call methods off of compare to get statistics and plots
 
 
 ## Details
@@ -29,8 +30,15 @@ compare.print_stats()
 |--------------|----------------------------|
 |Mean error    |The average of all the differences between the gold standard measure and the new measure|
 |Mean absolute error |The average of all the absolute differences between the gold standard measure and the new measure|
+|Mean squared error |The average of all the squared differences between the gold standard measure and the new measure. This metric does a better job than MAE at punishing outliers in the data, but has the disadvantage that the metric is no longer in the same units as the original inputs|
+|Root mean squared error | The average of all the square root of the squared differences between the gold standard and the new measure. This metric is in the same units as the original inputs|
 |Correlation |Pearson Product Correlation between the gold standard measure and the new measure|
 |95% Confidence Intervals |Based on the provided data, there is a 95% chance that any new measure obtained falls within this range of the gold standard  measure|
+
+Adjust number of decimals in *print_stats* output by setting *round_amount*:
+```python
+compare.print_stats(round_amount = 3)
+```
 
 ### Scatter Plot
 Get the BlandAltman scatter plot by:
