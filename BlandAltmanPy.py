@@ -51,6 +51,18 @@ class BlandAltman():
         print("+95% Confidence Interval = {}".format(round(self.CI95[0],round_amount)))
         print("-95% Confidence Interval = {}".format(round(self.CI95[1],round_amount)))
 
+    def return_stats(self):
+        # return dict of statistics
+        stats_dict = {'mean_error': self.mean_error,
+        'mean_absolute_error':self.mean_absolute_error,
+        'mean_squared_error':self.mean_squared_error,
+        'root_mean_squared_error':self.root_mean_squared_error,
+        'correlation':self.correlation,
+        'CI_95%+':self.CI95[0],
+        'CI_95%-':self.CI95[1]}
+
+        return stats_dict
+
     def scatter_plot(self,x_label='Gold Standard',y_label='New Measure',
                     figure_size=(4,4), show_legend=True,
                     the_title=' ',

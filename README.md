@@ -40,6 +40,12 @@ Adjust number of decimals in *print_stats* output by setting *round_amount*:
 compare.print_stats(round_amount = 3)
 ```
 
+Return a python dictionary of the statistics:
+```python
+stats_dict = compare.return_stats()
+```
+
+
 ### Scatter Plot
 Get the BlandAltman scatter plot by:
 ```python
