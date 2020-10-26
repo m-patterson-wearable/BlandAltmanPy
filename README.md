@@ -11,13 +11,13 @@ The Bland-Altman method was introduced in a 1986 journal paper by those authors 
       - One column should have the gold standard measurements
       - Another column should have the new measurements that you are comparing
       - Labels should be in first row
-4. Run the BlandAltman class definition
-    - class BlandAltman()
-5. Create the BlandAltman class for your data:
+4. Create the BlandAltman class for your data:
 ```python
 compare = BlandAltmanPy.BlandAltman(df.gold_standard,df.new_measure)
 ```
-6. Now you can call methods off of compare to get statistics and plots
+5. Now you can call methods off of compare to get statistics and plots
+
+See the *Example_Jupyter_Notebook* file for an example of using BlandAltmanPy within Jupyter Notebooks.
 
 
 ## Details
