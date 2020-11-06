@@ -31,7 +31,7 @@ class BlandAltman():
         diffs = gold_std - new_measure
         self.mean_error = diffs.mean()
         self.mean_absolute_error = diffs.abs().mean()
-        self.mean_squared_error = diffs.mean() ** 2
+        self.mean_squared_error = diffs ** 2
         self.root_mean_squared_error = np.sqrt(self.mean_squared_error)
         r = np.corrcoef(self.gold_std,self.new_measure)
         self.correlation = r[0,1]  # correlation coefficient
