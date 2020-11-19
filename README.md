@@ -70,15 +70,15 @@ compare.scatter_plot(x_label='ECG HR [bpm]',y_label='PPG HR [bpm]')
 ```
 ### Set title in plots
 ```python
-compare.scatter_plot(x_label='ECG HR [bpm]',y_label='PPG HR [bpm]',title='HR Comparison')
-compare.difference_plot(title='Bland-Altman Differnce Plot')
+compare.scatter_plot(x_label='ECG HR [bpm]',y_label='PPG HR [bpm]',the_title='HR Comparison')
+compare.difference_plot(the_title='Bland-Altman Differnce Plot')
 ```
 
 ### Toggle legend off in plots
 Turn legend off in plots by setting *show_legend=False*:
 ```python
-compare.scatter_plot(x_label='ECG HR [bpm]',y_label='PPG HR [bpm]',title='HR Comparison',show_legend=False)
-compare.difference_plot(title='Bland-Altman Differnce Plot',show_legend=False)
+compare.scatter_plot(x_label='ECG HR [bpm]',y_label='PPG HR [bpm]',the_title='HR Comparison',show_legend=False)
+compare.difference_plot(the_title='Bland-Altman Differnce Plot',show_legend=False)
 ```
 
 ### Save plots as images
@@ -92,8 +92,8 @@ compare.difference_plot(file_name='blood_pressure_diff_plot.pdf')
 ### Set figure size in plots
 Set figure size in inches. Useful for formatting images to fit journal paper size requirements. Default is *figure_size=(4,4)*
 ```python
-compare.scatter_plot(x_label='ECG HR [bpm]',y_label='PPG HR [bpm]',title='Heart Rate Comparison',figure_size=(8,8))
-compare.difference_plot(title='Bland-Altman Differnce Plot',figure_size=(8,8))
+compare.scatter_plot(x_label='ECG HR [bpm]',y_label='PPG HR [bpm]',the_title='Heart Rate Comparison',figure_size=(8,8))
+compare.difference_plot(the_title='Bland-Altman Differnce Plot',figure_size=(8,8))
 ```
 
 ### Adjust for multiple measurements on one subject
