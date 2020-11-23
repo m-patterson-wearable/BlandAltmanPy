@@ -32,7 +32,7 @@ class BlandAltman():
         self.mean_error = diffs.mean()
         self.mean_absolute_error = diffs.abs().mean()
         self.mean_squared_error = (diffs ** 2).mean()
-        self.root_mean_squared_error = np.sqrt(diffs**2).mean()
+        self.root_mean_squared_error = np.sqrt((diffs**2).mean())
         r = np.corrcoef(self.gold_std,self.new_measure)
         self.correlation = r[0,1]  # correlation coefficient
         diffs_std = diffs.std()    # 95% Confidence Intervals
