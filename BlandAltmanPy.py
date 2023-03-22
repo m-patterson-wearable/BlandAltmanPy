@@ -96,7 +96,7 @@ class BlandAltman():
             ax.legend()
         plt.savefig(file_name,bbox_inches='tight')
 
-    def difference_plot(self,x_label='Difference between methods',
+    def difference_plot(self,x_label='Gold standard',
                         y_label='Average of two methods',averaged=False,
                         figure_size=(4,4),show_legend=True,
                         the_title='',file_name='BlandAltman_DifferencePlot.pdf',
@@ -121,7 +121,7 @@ class BlandAltman():
 
         fig = plt.figure(figsize=figure_size)
         ax = fig.add_axes([0,0,1,1])
-        ax.scatter(avgs,diffs,label='Observations')
+        ax.scatter(avgs,self.gold_std,label='Observations')
         x_vals = np.array(ax.get_xlim())
         ax.axhline(self.mean_error,color='black',label='Mean Error')
         ax.axhline(self.CI95[0],color='black',linestyle='--',label='+95% Confidence Interval')
